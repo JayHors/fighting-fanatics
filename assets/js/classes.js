@@ -36,8 +36,16 @@ class Goblin extends Enemy{
 }
 class Jay extends Enemy{
     constructor(){
-        super(10000,"assets/enemy/jay.png","Jay",
+        super(1000,"assets/enemy/jay.png","Jay",
         (target) =>{target.hp -= 99 * (turnCounter - 256);}
+        );
+    }
+}
+class BunnyEnd extends Enemy{
+    constructor(){
+        super(
+            8000,"null","Ending Bunny",
+            (target) =>{location.reload();}
         );
     }
 }
